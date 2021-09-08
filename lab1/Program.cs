@@ -10,7 +10,26 @@ namespace lab1
     {
         static void Main(string[] args)
         {
-            //мяу-
+            string a,b,c;
+            
+            Console.WriteLine("Input r1");
+            a = Console.ReadLine();
+            Console.WriteLine("Input r2");
+            b = Console.ReadLine();
+            Console.WriteLine("Input r3");
+            c = Console.ReadLine();
+
+            int r1 = Convert.ToInt32(a);
+            int r2 = Convert.ToInt32(b);
+            int r3 = Convert.ToInt32(c);
+
+            int R = r1 + r2 + r3;
+
+
+
+            Console.WriteLine("Resistance = " + R);
+
+            Console.ReadLine();
         }
     }
 }
