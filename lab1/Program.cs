@@ -30,6 +30,7 @@ namespace lab1
             Console.WriteLine("Resistance = " + R);
 
             Console.ReadLine();
+
         }
     }
 }
