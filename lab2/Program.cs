@@ -13,7 +13,7 @@ namespace lab2
             string nn;
             Console.WriteLine("Введiть nn");
             nn = Console.ReadLine();
-            while (Convert.ToInt32(nn) <= 0.0)
+            while (Convert.ToInt32(nn) < 0.0)
             {
                 Console.WriteLine("nn має бути бiльше або = 0");
                 nn = Console.ReadLine();
