@@ -1,0 +1,138 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+
+
+
+
+    class Program2
+    {
+
+       // 1.	Виводить на екран введене число з клавіатури в зворотному порядку(1234->4321)
+       // 2.	Виводить будь-яку строку в зворотному порядку(АБВ->ВБА)
+
+        static void Main(string[] args)
+        {
+            string a = Console.ReadLine();
+
+
+            for (int i = a.Length-1; i >=0; i--)
+            {
+                Console.Write(a[i]);
+            
+            }
+            
+            Console.ReadLine();
+           
+        }
+    }
+}
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test3
+{
+    class Program
+    {
+
+        // 3.	Дробові числа виводяться в зворотному порядку і ціла частина і дробова(123.456->321.654)
+
+        static void Main(string[] args)
+        {
+            string numbers = Console.ReadLine();
+
+            string[] arrnumbers = numbers.Split('.', ',');
+
+            string first_part = arrnumbers[0];
+            string second_part = arrnumbers[1];
+
+            for (int i = first_part.Length-1; i >= 0; i--)
+            {
+                Console.Write(first_part[i]);
+
+            }
+            Console.Write(".");
+            for (int i = second_part.Length-1; i >= 0; i--)
+            {
+                Console.Write(second_part[i]);
+
+            }
+            Console.ReadLine();
+        }
+
+
+    }
+}
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test3
+{
+    class Program
+    {
+
+        // 4.	Реалізувати метод, що буде масив повертати задом навпаки (Використання Array.Reverse() заборонено!)
+        // 5.	Виконати пункт 4 з використанням ключових слів ref i out
+
+        static void Main(string[] args)
+        {
+            int size = int.Parse(Console.ReadLine());
+            
+            int[] array = new int[size];
+
+
+            for (int i = 0; i < array.Length; i++)
+            {
+
+                Console.WriteLine("Введите " + (i + 1) + " число");
+
+
+                array[i] = int.Parse(Console.ReadLine());
+
+
+            
+
+            }
+            Result(ref array, out string res);
+
+            Console.Write(res);
+            Console.ReadLine();
+        }
+
+
+
+        static void Result(ref int [] arr, out string res)
+        {
+            string result = string.Empty;
+
+            for (int i = arr.Length-1; i >= 0; i--)
+            {
+                result += arr[i];
+            }
+
+            res = result;
+        }
+
+
+    }
+}
