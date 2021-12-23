@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Laba2
+{
+    class Program
+    {
+
+        // 4.	Перевірити істинність вислову: "Серед трьох даних цілих чисел є хоч би одна пара взаємно протилежних". 
+        static void Main(string[] args)
+        {
+            int[] arr = new int[3];
+
+            for(int i = 0; i<arr.Length; i++)
+            {
+                Console.WriteLine("Введiть " + (i+1) + " число");
+                
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+
+
+            first(arr);
+        }
+
+
+        static void first(int [] arr)
+        {
+
+            if ((arr[0] / arr[1]) == -1 || (arr[0] / arr[2]) == -1)
+            {
+                Console.WriteLine(true);
+            }
+            else if ((arr[1] / arr[2]) == -1 || (arr[1] / arr[0]) == -1)
+            {
+                Console.WriteLine(true);
+
+            }
+            else if ((arr[2] / arr[1]) == -1 || (arr[2] / arr[0]) == -1)
+            {
+                Console.WriteLine(true);
+
+            }
+            else
+            {
+                Console.WriteLine(false);
+
+            }
+            Console.ReadLine();
+        }
+    }
+}
